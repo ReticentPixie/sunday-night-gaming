@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shameful Display Sunday Night Gaming</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div id="main">
+        <nav>
+            <a href="#"><i class="fas fa-home"></i>Home</a>
+            <a href="#"><i class="fas fa-list-alt"></i>My Games</a>
+        </nav>
+        <div id="logo">
+            <img src="./assets/image0.jpg" alt="Shameful Display Gaming">
+        </div>
+        <form>
+            <input type="text" id="game" placeholder="Enter a Game Name">
+            <input type="submit" id="searchGame" value="Search Game">
+        </form>
+        <div id="gameDisplay">
+            <div id="gameImage"></div>
+            <div id="gameTitle"></div>
+            <div id="gameDescription"></div>
+        </div>
+        <footer>
+            <p>Webpage by: <span><a href="https://www.linkedin.com/in/diana-barney-948b9063/">Diana Barney</a></span></p>
+            <p>Checkout the <span><a href="https://www.giantbomb.com/">Giant Bomb API</a></span></p>
+        </footer>
+    </div>
     
 </body>
 </html>
