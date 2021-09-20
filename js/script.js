@@ -3,17 +3,19 @@
 // const BASE_URL = "https://www.giantbomb.com/api";
 // const API_KEY = "74eac851eddd98d383885278b2969c6c35af31a8";
 //cache & store relevant DOM elements
-//-->add one for the image
-const $title = $('#gameTitle');
-const $description = $('#gameDescription');
+const $image = $(`#gameImage`);
+const $title = $(`#gameTitle`);
+const $description = $(`#gameDescription`);
+const $learnMore = $(`#learnMore`);
+const $GBLink = $(`#GBLink`);
 //-->add aditional for platforms/multiplayer/etc.
-const $input = $('input[type="text"]');
+const $input = $(`input[type="text"]`);
 
 //variable to extract & store user input and store data from AJAX call to API
 let userInput, gameData;
 
 // ========== Event Listeners ==========
-$('form').on('submit', handleGetData);
+$(`form`).on(`submit`, handleGetData);
 
 // ========== Functions ==========
 //hand the request for data to the Giant Bomb API
@@ -29,14 +31,15 @@ function handleGetData(event) {
 
     //make a request to the API using the user input
     $.ajax({
-        url: 'https://www.giantbomb.com/api/search',
-        dataType: 'jsonp',
-        jsonp: 'json_callback',
+        url: `https://www.giantbomb.com/api/search`,
+        dataType: `jsonp`,
+        jsonp: `json_callback`,
         data: {
-            api_key: '74eac851eddd98d383885278b2969c6c35af31a8',
+            api_key: `74eac851eddd98d383885278b2969c6c35af31a8`,
             query: `${userInput}`,
-            format: 'jsonp',
-            // field_list: 'name',
+            format: `jsonp`,
+            resources: `game`,
+            //field_list: 'name',
         }
         // url:`${BASE_URL}/game/?api_key=${API_KEY}&format=jsonp&json_callback=logResults&resource_type=game&query=${userInput}`
     }).then(
@@ -48,7 +51,7 @@ function handleGetData(event) {
         },
         //on fail
         (error) => {
-            console.log('error: ', error);
+            console.log(`error: `, error);
         }
     );
 }
@@ -57,6 +60,13 @@ function handleGetData(event) {
 function render() {
     $title.text(gameData[0].name)
     $description.text(gameData[0].deck)
+    $image.attr({
+        src: gameData[0].image.screen_url,
+        title: `Cover Image`,
+        alt: `Game Cover Image`,
+    });
+    $learnMore.html(`<a href="${gameData[0].site_detail_url}" target="blank">More Info Here</a>`)
+    console.log(gameData[0].site_detail_url);
 }
 
 
@@ -67,5 +77,6 @@ function render() {
     - jQuery & JSONP - https://learn.jquery.com/ajax/working-with-jsonp/
     - jQuery & JSONP Examples - https://www.sitepoint.com/jsonp-examples/
     - using JSONP to call GiantBomb API (example code) - https://pastebin.com/4xfsMcCJ
+
 ==================================
 */
