@@ -127,5 +127,13 @@
   #gameDisplay {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    padding: 0px 15px;
   }
+
+#gameTitle {
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  color: #EE5C39;
+  font-weight: bold;
+}
