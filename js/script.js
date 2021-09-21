@@ -61,7 +61,7 @@ function render() {
     $title.text(gameData[0].name)
     $description.text(gameData[0].deck)
     $image.attr({
-        src: gameData[0].image.screen_url,
+        src: gameData[0].image.original_url,
         title: `Cover Image`,
         alt: `Game Cover Image`,
     });

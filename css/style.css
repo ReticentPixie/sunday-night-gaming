@@ -12,10 +12,11 @@
   #main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: space-between;
     border: 3px solid pink;
     min-width: 100%;
+    min-height: 100%;
   }
 
   nav, footer {
@@ -24,19 +25,17 @@
     color: #EE5C39;
     background-color: #374b4e;
     opacity: .90;
-    /* min-height: 5%; */
     padding: 10px 20px;
     gap: 10px;
-    max-height: 25%;
+    height: 75px;
   }
 
   .navIcon {
     display: flex;
-    /* align-items: center; */
-    align-content: center;
     border: 3px solid pink;
     width: 33%;
     transition: all 0.3s ease;
+    height:
   }
 
   .navText {
@@ -58,6 +57,7 @@
     display: flex;
     align-items: center;
     align-content: space-between;
+    height: 45px;
   }
 
   p.footer {
@@ -82,15 +82,20 @@
     justify-content: center;
     align-content: center;
     font-family: 'Press Start 2P';
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #logoImg {
+    max-height: 35%;
+    max-width: 35%;
+    box-shadow: 1px 1px 5px 4px #b9f1fc;
   }
 
   img {
-    max-height: 42%;
-    max-width: 42%;
+    max-height: 40%;
+    max-width: 40%;
     margin: 15px auto;
     border-radius: 15px;
-    box-shadow: 1px 1px 5px 4px #b9f1fc;
   }
 
   #title {
@@ -103,7 +108,7 @@
     display: flex;
     justify-content: center;
     height: 35px;
-    margin: 0px 15px;
+    margin: 15px 15px;
     gap: 10px;
   }
 
@@ -117,4 +122,10 @@
     box-shadow: 1px 1px 3px 2px #b9f1fc;
     color: #374b4e;
     font-weight: bold;
+  }
+
+  #gameDisplay {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
