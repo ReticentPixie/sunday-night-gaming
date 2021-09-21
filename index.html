@@ -9,15 +9,24 @@
     <script defer src="./js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main">
-        <nav>
-            <a href="#"><i class="fas fa-home"></i>Home</a>
-            <a href="#"><i class="fas fa-list-alt"></i>My Games</a>
+        <nav>        
+            <div class="navIcon">
+                <a href="#"><i class="fas fa-home"><p class="navText">Home</p></i></a>
+            </div>
+            <div class="navIcon">
+                <a href="#"><i class="fas fa-gamepad"><p class="navText">My Games</p></i></i></a>
+            </div>
+            <div class="navIcon">
+                <a href="#"><i class="fas fa-question-circle"><p class="navText">About</p></i></a>
+            </div>
         </nav>
         <div id="logo">
             <img src="./assets/image0.jpg" alt="Shameful Display Gaming">
+            <p id="title">Sunday Night Gaming</p>
         </div>
         <form>
             <input type="text" id="game" placeholder="Enter a Game Name">
@@ -30,10 +39,9 @@
             <div id="learnMore"></div>
         </div>
         <footer>
-            <p>Webpage by: <span><a href="https://www.linkedin.com/in/diana-barney-948b9063/">Diana Barney</a></span></p>
-            <p>Checkout the <span><a href="https://www.giantbomb.com/">Giant Bomb API</a></span></p>
+            <p>Webpage Author: <span><a href="https://www.linkedin.com/in/diana-barney-948b9063/">ReticentPixie</a></span></p>
+            <p>Powered by: <span><a href="https://www.giantbomb.com/">Giant Bomb API</a></span></p>
         </footer>
-    </div>
-    
+    </div>   
 </body>
 </html>
