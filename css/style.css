@@ -3,7 +3,6 @@
   }
 
   body {
-    /* min-height: 100vh; */
     margin: 0;
     background-color: #205989;
     font-family: Helvetica;
@@ -13,7 +12,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid pink;
     position: relative;
     min-width: 100%;
     min-height: 100vh;
@@ -23,35 +21,31 @@
   nav, footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: #EE5C39;
     background-color: #374b4e;
     opacity: .90;
     padding: 10px 20px;
     gap: 10px;
-    height: 65px;
+    height: 3.5rem;
     width: 100%;
   }
 
-  #navIcon{
+  nav>a{
     display: flex;
-    border: 3px solid red;
+    justify-content: space-between;
+    /* border: 3px solid red; */
     width: 33%;
     transition: all 0.3s ease;
   }
 
-  .navText {
-    font-family: Helvetica;
-    font-size: 15px;
+  i {
+    color: #EE5C39;
+    font-size: 35px;
   }
 
   i:hover {
     background-color: #b9f1fc;
-  }
-
-
-  i {
-    color: #EE5C39;
-    font-size: 30px;
   }
 
   footer {
@@ -84,19 +78,19 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
     font-family: 'Press Start 2P';
-    font-size: 1rem;
   }
 
   #logoImg {
-    max-height: 35%;
-    max-width: 35%;
+    height: auto;
+    max-width: 50%;
     box-shadow: 1px 1px 5px 4px #b9f1fc;
   }
 
   img {
-    max-height: 40%;
-    max-width: 40%;
+    height: auto;
+    max-width: 50%;
     margin: 15px auto;
     border-radius: 15px;
   }
@@ -104,18 +98,20 @@
   #title {
     margin: 15px auto;
     color: #EE5C39;
+    font-size: 1.16rem;
   }
 
   form {
     display: flex;
     justify-content: center;
     height: 35px;
-    margin: 15px 15px;
+    width: 100%;
+    margin: 15px 20px;
     gap: 10px;
   }
 
   #game {
-    width: 75%;
+    width: 50%;
     color: #374b4e;
   }
 
@@ -143,4 +139,57 @@
 #gameDescription {
   color: white;
   padding-bottom: 15px;
+}
+
+@media (min-width: 750px) {
+  #page-container {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+  
+  #title {
+    font-size: 1.6rem;
+  }
+
+  #gameDisplay {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 30px;
+  }
+
+  #gameImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 3;
+    height: auto;
+    max-width: 80%;
+  }
+
+  #gameTitle {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 0;
+    align-self: flex-end;
+  }
+
+  #gameDescription {
+    padding: 0;
+  }
+
+  #learnMore {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1250px) {
+  body {
+    width: 1250px;
+    height: 75%;
+    margin: auto;
+    background-color: black;
+  }
+
+  #page-container {
+    background-color: #205989;
+  }
 }
