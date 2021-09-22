@@ -1,7 +1,4 @@
 // ========== Variables & Constants ==========
-//base url & API key
-// const BASE_URL = "https://www.giantbomb.com/api";
-// const API_KEY = "74eac851eddd98d383885278b2969c6c35af31a8";
 //cache & store relevant DOM elements
 const $image = $(`#gameImage`);
 const $title = $(`#gameTitle`);
@@ -10,22 +7,20 @@ const $learnMore = $(`#learnMore`);
 const $GBLink = $(`#GBLink`);
 //-->add aditional for platforms/multiplayer/etc.
 const $input = $(`input[type="text"]`);
-
-//variable to extract & store user input and store data from AJAX call to API
+//cache & store user input and store data from AJAX call to API
 let userInput, gameData;
 
 // ========== Event Listeners ==========
 $(`form`).on(`submit`, handleGetData);
 
 // ========== Functions ==========
-//hand the request for data to the Giant Bomb API
+//handle the request for data to the Giant Bomb API
 function handleGetData(event) {
     //prevent the default 'submit' element behavior
     event.preventDefault();
 
     //get the value/text from the user input element
     userInput = $input.val();
-    console.log(userInput);
     //then clear the input element
     $input.val("");
 
@@ -39,9 +34,7 @@ function handleGetData(event) {
             query: `${userInput}`,
             format: `jsonp`,
             resources: `game`,
-            //field_list: 'name',
         }
-        // url:`${BASE_URL}/game/?api_key=${API_KEY}&format=jsonp&json_callback=logResults&resource_type=game&query=${userInput}`
     }).then(
         //on success
         (data) => {
