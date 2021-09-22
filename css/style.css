@@ -80,6 +80,7 @@
     align-content: center;
     align-items: center;
     font-family: 'Press Start 2P';
+    text-align: center;
   }
 
   #logoImg {
@@ -141,6 +142,37 @@
   padding-bottom: 15px;
 }
 
+/* Styling for logo and page titles on Game List and About pages */
+#logo2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P';
+  padding: 20px 35px;
+  column-gap: 20px;
+}
+
+#title {
+  text-align: center;
+}
+
+/* Styling content on Game List page */
+#gameList {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+#underConstruction {
+  max-width: 350px;
+}
+
+
+/* Styling for screens larger than 750px */
 @media (min-width: 750px) {
   #page-container {
     max-width: 100%;
@@ -181,6 +213,7 @@
   }
 }
 
+/* Styling for screens larger than 1250px */
 @media (min-width: 1250px) {
   body {
     width: 1250px;
