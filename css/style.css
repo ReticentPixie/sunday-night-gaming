@@ -171,6 +171,24 @@
   max-width: 350px;
 }
 
+/* Styling content on the About Us page */
+#aboutContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 35px 15px 35px;
+  gap: 20px;
+}
+
+.aboutTitle {
+  font-family: 'Press Start 2P';
+  color: #EE5C39;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.aboutContent {
+  color: white;
+}
 
 /* Styling for screens larger than 750px */
 @media (min-width: 750px) {
