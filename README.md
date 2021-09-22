@@ -1,5 +1,5 @@
 # Sunday Night Gaming
-App to support planning & logistics of the weekly gaming habits of members of a private Discord server.
+App to support the planning & logistics of a weekly game night among members of a private Discord server.
 
 # Technologies Used
 * HTML
@@ -11,6 +11,7 @@ App to support planning & logistics of the weekly gaming habits of members of a 
 ![Screenshot of Desktop Layout](/assets/screen-shot-desktop.png)
 
 # Getting Started
+[Click here](https://reticentpixie.github.io/sunday-night-gaming/) to see the deployed project.
 
 # Future Enhancements
 * About page built out with information about the related Discord Server

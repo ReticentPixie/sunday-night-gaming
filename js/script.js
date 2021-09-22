@@ -58,13 +58,17 @@ function handleGetData(event) {
 
 // render/display the data that was returned by a successful API call
 function render() {
-    $title.text(gameData[0].name)
-    $description.text(gameData[0].deck)
-    $image.attr({
-        src: gameData[0].image.original_url,
-        title: `Cover Image`,
-        alt: `Game Cover Image`,
-    });
+    if (gameData.length === 0) {
+        alert(`Game not found. Please check the title you entered and try again.`);
+    } else {
+        $title.text(gameData[0].name)
+        $description.text(gameData[0].deck)
+        $image.attr({
+            src: gameData[0].image.original_url,
+            title: `Cover Image`,
+            alt: `Game Cover Image`,
+        });
+    }
     $learnMore.html(`<a href="${gameData[0].site_detail_url}" target="blank">More Info Here</a>`)
     console.log(gameData[0].site_detail_url);
 }
